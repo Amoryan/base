@@ -1,4 +1,4 @@
-package com.fxyan.adapter.pop;
+package com.fxyan.adapter.widget;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -11,10 +11,10 @@ import com.fxyan.base.R;
 /**
  * @author fxYan
  */
-public final class IphonePopWindowAdapter extends BaseRecyclerAdapter<String, IphonePopWindowAdapter.ViewHolder> {
+public final class IphoneStylePopAdapter extends BaseRecyclerAdapter<String, IphoneStylePopAdapter.ViewHolder> {
 
-    public IphonePopWindowAdapter(@NonNull Context context) {
-        super(context, R.layout.listitem_iphone_pop);
+    public IphoneStylePopAdapter(@NonNull Context context) {
+        super(context, R.layout.listitem_iphone_style_pop);
     }
 
     @Override

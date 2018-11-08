@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/outside"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_12">
+
+    <FrameLayout
+            android:id="@+id/sizeFl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/cancelTv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/shape_bg_iphone_style_widget"
+                android:overScrollMode="never"/>
+
+    </FrameLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/cancelTv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_50"
+            android:background="@drawable/shape_bg_iphone_style_widget"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/color_47a5ed"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

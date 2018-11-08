@@ -34,16 +34,27 @@ public final class DisplayUtils {
         return height;
     }
 
-    public static float dp2px(Context context, float dp) {
-        float px = 0;
+    public static int dp2px(Context context, float dp) {
+        int px = 0;
 
         WindowManager manager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         if (manager != null) {
             DisplayMetrics metrics = new DisplayMetrics();
             manager.getDefaultDisplay().getMetrics(metrics);
-            px = dp * metrics.density;
+            px = (int) (dp * metrics.density);
         }
 
         return px;
+    }
+
+    public static int getStatusBarHeight(Context context) {
+        int result = dp2px(context, 25);
+
+        int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            result = context.getResources().getDimensionPixelSize(resourceId);
+        }
+
+        return result;
     }
 }

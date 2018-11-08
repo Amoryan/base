@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="IphoneStyleDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item><!--悬浮-->
+        <item name="android:windowNoTitle">true</item><!--去掉title-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--去掉默认背景-->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item><!--背景阴影-->
+    </style>
+</resources>

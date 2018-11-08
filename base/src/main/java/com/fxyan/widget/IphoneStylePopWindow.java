@@ -11,8 +11,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.PopupWindow;
 
 import com.fxyan.adapter.BaseRecyclerAdapter;
-import com.fxyan.adapter.pop.DividerItemDecoration;
-import com.fxyan.adapter.pop.IphonePopWindowAdapter;
+import com.fxyan.adapter.decoration.DividerItemDecoration;
+import com.fxyan.adapter.widget.IphoneStylePopAdapter;
 import com.fxyan.base.R;
 import com.fxyan.utils.DisplayUtils;
 
@@ -21,19 +21,19 @@ import java.util.List;
 /**
  * @author fxYan
  */
-public final class IphonePopWindow extends PopupWindow implements View.OnClickListener {
+public final class IphoneStylePopWindow extends PopupWindow implements View.OnClickListener {
 
     private View contentView;
 
-    private IphonePopWindowAdapter adapter;
+    private IphoneStylePopAdapter adapter;
 
     private Animation enterAnim;
     private Animation exitAnim;
 
-    public IphonePopWindow(final Context context) {
+    public IphoneStylePopWindow(final Context context) {
         super(context);
 
-        contentView = LayoutInflater.from(context).inflate(R.layout.layout_iphone_pop, null);
+        contentView = LayoutInflater.from(context).inflate(R.layout.layout_iphone_style_pop, null);
 
         contentView.findViewById(R.id.outside).setOnClickListener(this);
         contentView.findViewById(R.id.cancelTv).setOnClickListener(this);
@@ -45,7 +45,7 @@ public final class IphonePopWindow extends PopupWindow implements View.OnClickLi
 
         RecyclerView recyclerView = contentView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        adapter = new IphonePopWindowAdapter(context);
+        adapter = new IphoneStylePopAdapter(context);
         recyclerView.addItemDecoration(new DividerItemDecoration(context));
         recyclerView.setAdapter(adapter);
 
@@ -59,8 +59,8 @@ public final class IphonePopWindow extends PopupWindow implements View.OnClickLi
     }
 
     private void initAnim(Context context) {
-        enterAnim = AnimationUtils.loadAnimation(context, R.anim.translate_iphone_pop_enter);
-        exitAnim = AnimationUtils.loadAnimation(context, R.anim.translate_iphone_pop_exit);
+        enterAnim = AnimationUtils.loadAnimation(context, R.anim.translate_iphone_style_pop_enter);
+        exitAnim = AnimationUtils.loadAnimation(context, R.anim.translate_iphone_style_pop_exit);
 
         exitAnim.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -69,7 +69,7 @@ public final class IphonePopWindow extends PopupWindow implements View.OnClickLi
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                IphonePopWindow.super.dismiss();
+                IphoneStylePopWindow.super.dismiss();
             }
 
             @Override
