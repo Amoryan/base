@@ -1,0 +1,29 @@
+ext {
+    config = [
+            "compileSdkVersion": 28,
+            "targetSdkVersion" : 28,
+            "minSdkVersion"    : 16,
+            "applicationId"    : "com.fxyan.demo",
+            "versionCode"      : 1,
+            "versionName"      : "1.0.0",
+    ]
+    groups = [
+            "android_support"           : "com.android.support",
+            "android_support_constraint": "com.android.support.constraint",
+    ]
+    names = [
+            "appcompat_v7"        : "appcompat-v7",
+            "recyclerview_v7"     : "recyclerview-v7",
+            "constraint_layout"   : "constraint-layout",
+    ]
+    versions = [
+            "android_support"           : "28.0.0",
+            "android_support_constraint": "1.1.3",
+            "kotlin_version"            : "1.3.0",
+    ]
+    support = [
+            "appcompat_v7"     : "${groups.android_support}:${names.appcompat_v7}:${versions.android_support}",
+            "recyclerview_v7"  : "${groups.android_support}:${names.recyclerview_v7}:${versions.android_support}",
+            "constraint_layout": "${groups.android_support_constraint}:${names.constraint_layout}:${versions.android_support_constraint}",
+    ]
+}
