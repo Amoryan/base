@@ -17,7 +17,12 @@ public class SWGenerator {
     public static void main(String[] args) {
         generate();
 
-        String[] swDps = {"360", "370", "380", "390", "400", "411", "430", "440", "450", "460", "470", "480"};
+        String[] swDps = {
+                "300", "310", "320", "330", "340",
+                "350", "360", "370", "380", "390",
+                "400", "411", "430", "440", "450",
+                "460", "470", "480"
+        };
         for (String swDp : swDps) {
             generate(swDp);
         }
