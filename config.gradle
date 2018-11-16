@@ -12,9 +12,9 @@ ext {
             "android_support_constraint": "com.android.support.constraint",
     ]
     names = [
-            "appcompat_v7"        : "appcompat-v7",
-            "recyclerview_v7"     : "recyclerview-v7",
-            "constraint_layout"   : "constraint-layout",
+            "appcompat_v7"     : "appcompat-v7",
+            "recyclerview_v7"  : "recyclerview-v7",
+            "constraint_layout": "constraint-layout",
     ]
     versions = [
             "android_support"           : "28.0.0",
@@ -25,5 +25,8 @@ ext {
             "appcompat_v7"     : "${groups.android_support}:${names.appcompat_v7}:${versions.android_support}",
             "recyclerview_v7"  : "${groups.android_support}:${names.recyclerview_v7}:${versions.android_support}",
             "constraint_layout": "${groups.android_support_constraint}:${names.constraint_layout}:${versions.android_support_constraint}",
+    ]
+    other = [
+            "librarybar": "com.gyf.barlibrary:barlibrary:2.3.0"
     ]
 }

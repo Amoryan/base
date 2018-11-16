@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Toast
 import com.fxyan.widget.IphoneStyleDialog
 import com.fxyan.widget.IphoneStylePopWindow
+import com.gyf.barlibrary.ImmersionBar
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -33,6 +34,10 @@ class MainActivity : AppCompatActivity() {
                 }
                 .setCancelable(false)
                 .show()
+        }
+
+        textView2.setOnClickListener {
+            FullScreenAdjustResizeActivity.open(this@MainActivity)
         }
     }
 }

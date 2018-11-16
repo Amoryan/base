@@ -24,4 +24,13 @@
             android:textColor="#0f0f0f"
             android:textSize="20sp"/>
 
+    <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="全屏模式和adjustResize"
+            android:textColor="#0f0f0f"
+            android:textSize="20sp"/>
+
 </LinearLayout>

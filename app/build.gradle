@@ -25,6 +25,7 @@ android {
 }
 
 def support = rootProject.ext.support
+def other = rootProject.ext.other
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -35,6 +36,8 @@ dependencies {
     implementation support.appcompat_v7
     implementation support.constraint_layout
     implementation support.recyclerview_v7
+
+    implementation other.librarybar
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
